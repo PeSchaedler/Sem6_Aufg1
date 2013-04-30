@@ -20,6 +20,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -166,7 +167,7 @@ int main (int argc, char** argv)
 	int32_t ret = EXIT_SUCCESS;
 	FILE * in_file_hdl = NULL;
 	FILE * out_file_hdl = NULL;
-	listNode_t *curr = result_list.headOfList;
+//	listNode_t *curr = result_list.headOfList;  // Fehler!!!!!!!!!!!!!! Fehler!!!!!!!!!!!!!! Fehler!!!!!!!!!!!!!! Fehler!!!!!!!!!!!!!!
 	int idx = 0;
 
 	statistics_t stat;
@@ -234,7 +235,7 @@ int main (int argc, char** argv)
 					operands_b[counter] = operand_b;
 					fprintf(out_file_hdl,"%llu = %llu + (%d * %d)\n",result[counter],prev_result,operand_a, operand_b);
 					printf("%llu = %llu + (%d * %d)\n",result[counter],prev_result,operand_a, operand_b);
-					ret = list_push_back(&result_list,list_get_new_element(operand_a,operand_b,result[counter]));
+//					ret = list_push_back(&result_list,list_get_new_element(operand_a,operand_b,result[counter]));   Fehler!!!!!!!!!!!!!!  Fehler!!!!!!!!!!!!!!  Fehler!!!!!!!!!!!!!! Fehler!!!!!!!!!!!!!!
 					if(EXIT_FAILURE == ret)
 					{
 						break;
